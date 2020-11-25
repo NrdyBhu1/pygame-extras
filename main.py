@@ -9,14 +9,11 @@ nbfunctions.set_pointer_cursor("xbm-cursors/cursor-mouse.xbm", "xbm-cursors/curs
 win = pygame.display.set_mode((1366, 768), FULLSCREEN)
 pygame.display.set_caption("Pygame Extras")
 
-player_rect = pygame.Rect(20, 700, 100, 25)
-
-test_button = nbclasses.Button(300, 400, 200, 100, nbfunctions.terminate, color=(100, 100, 100), intensity=105)
+test_button = nbclasses.Button(10, 650, 200, 100, nbfunctions.terminate, text="Quit", color=(100, 0, 0), intensity=50)
 test_text = nbfunctions.get_text("hello world", 30, True, nbcolors.GREEN)
 
 def draw():
     win.fill(nbcolors.BLACK)
-    pygame.draw.rect(win, nbcolors.CYAN, player_rect)
     win.blit(test_text, (20, 20))
     test_button.blit(win)
     test_button.update()
