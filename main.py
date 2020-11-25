@@ -4,7 +4,7 @@ from pygame.locals import *
 
 pygame.init()
 
-nbfunctions.set_pointer_cursor("xbm-cursors/cursor-mouse.xbm", "xbm-cursors/cursor-mouse-mask.xbm")
+nbfunctions.pointer_cursor = pygame.cursors.load_xbm("xbm-cursors/modifier-anchor.xbm", "xbm-cursors/modifier-anchor-mask.xbm")
 
 win = pygame.display.set_mode((1366, 768), FULLSCREEN)
 pygame.display.set_caption("Pygame Extras")
