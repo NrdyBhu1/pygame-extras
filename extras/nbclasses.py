@@ -1,4 +1,5 @@
 import pygame
+from . import nbfunctions
 pygame.init()
 
 class Button():
@@ -20,7 +21,9 @@ class Button():
         if self.rect.collidepoint(mouse_pos):
             self.color = self.hover
             self.is_hovered = True
+            pygame.mouse.set_cursor(*nbfunctions.get_pointer_cursor())
         else:
             self.is_hovered = False
             self.color = self.normal
+            pygame.mouse.set_cursor(*nbfunctions.get_default_cursor())
 
