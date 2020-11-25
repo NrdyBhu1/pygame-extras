@@ -16,7 +16,6 @@ def draw():
     win.fill(nbcolors.BLACK)
     win.blit(test_text, (20, 20))
     test_button.blit(win)
-    test_button.update()
 
 while True:
     for event in pygame.event.get():
@@ -25,4 +24,5 @@ while True:
                 nbfunctions.terminate()
 
     draw()
+    test_button.update()
     pygame.display.flip()
