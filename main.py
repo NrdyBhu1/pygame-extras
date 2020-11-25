@@ -3,14 +3,15 @@ import pygame
 from pygame.locals import *
 
 pygame.init()
+
+nbfunctions.set_pointer_cursor("xbm-cursors/cursor-mouse.xbm", "xbm-cursors/cursor-mouse-mask.xbm")
+
 win = pygame.display.set_mode((1366, 768), FULLSCREEN)
 pygame.display.set_caption("Pygame Extras")
 
 player_rect = pygame.Rect(20, 700, 100, 25)
 
-nbfunctions.set_pointer_cursor("xbm-cursors/cursor-mouse.xbm", "xbm-cursors/cursor-mouse-mask.xbm")
-
-test_button = nbclasses.Button(300, 400, 200, 100,color=(100, 100, 100), intensity=105)
+test_button = nbclasses.Button(300, 400, 200, 100, nbfunctions.terminate, color=(100, 100, 100), intensity=105)
 test_text = nbfunctions.get_text("hello world", 30, True, nbcolors.GREEN)
 
 def draw():
